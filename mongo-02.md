@@ -1,8 +1,10 @@
 ## 与其他数据库对比
+## 与其他数据库对比
 ![](https://images2017.cnblogs.com/blog/1108319/201712/1108319-20171219230026490-756534167.jpg)
 
 
 ## mongo 是什么
+
 - 文档型数据库
 
 - 如何安装
@@ -52,3 +54,52 @@ db.demo01.updateOne({name:'jon'},{$set:{location:'qinghai'}})
 ```
 db.demo01.find()
 ```
+
+
+
+## mongoose
+[Mongoose介绍和入门](http://www.cnblogs.com/zhongweiv/p/mongoose.html#mg_connstr)
+
+
+
+### data-type
+- String
+- Number
+- Date
+- Buffer
+- Boolean
+- Mixed: AnyType
+- Objectid :other object
+- Array
+
+相关属性：
+unique:唯一约束，声明改字段是唯一的
+
+### 数据的增删该查
+
+#### 查询参数 query
+- 满足任一条件：{$or:[]};
+- 大于: {field: {$gt: value} }
+- 是否存在: { field: { $exists: <boolean> } }
+
+##### 排序
+sort  {field:1} // 1 升序 2，降序
+
+
+
+
+
+
+
+
+
+
+
+
+## 错误处理
+
+Address already in use for socket: 0.0.0.0:27017
+ 端口被占用：没有正确关闭数据库导致；
+
+1. ps wuax | grep mongo
+2. kill xxxx
